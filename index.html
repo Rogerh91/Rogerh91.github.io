@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css">
 
 	<!-- Optional theme -->
-	
+
 
  <!-- Placed at the end of the document so the pages load faster -->
      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -26,6 +26,18 @@
 
     <link href="/static/css/main.css" rel="stylesheet">
 
+            <link rel="stylesheet" href="main.css">
+
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+      <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+
+      <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -37,7 +49,7 @@
   </head>
 
   <body>
-  
+
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -58,7 +70,7 @@
     <div class="jumbotron">
       <div class="container">
 
-  
+
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="banner">
  <right><div class="col-md-4" style="float: none; margin: 0 auto; margin-left:15cm; background-color: rgba(0,0,0,0.5);"></right>
 		<!-- Begin MailChimp Signup Form -->
@@ -73,9 +85,9 @@
 		<div class="response" id="mce-success-response" style="display:none"></div>
 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <input type="submit" value="Register" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default" style="line-height: normal !important; display: inline-block; float: right;position:relative;top:-38px;">
-    <div style="overflow: hidden; padding-right: .2em;"><div style="position: absolute; left: -5000px;"><input type="text" name="b_6f17d25b14c0aeb8c5b13daa4_99c315d5d4" tabindex="-1" value=""></div></div> 
+    <div style="overflow: hidden; padding-right: .2em;"><div style="position: absolute; left: -5000px;"><input type="text" name="b_6f17d25b14c0aeb8c5b13daa4_99c315d5d4" tabindex="-1" value=""></div></div>
     <div class="clear"></div><br>
-<p style="font-size: 16px;">Shout enables you to message companies directly, without having to look for their information.</p> 
+<p style="font-size: 16px;">Shout enables you to message companies directly, without having to look for their information.</p>
 <p style="font-size: 16px;">With one button click, your message is sent to companies, and pasted onto their social media outlets.</p>
     <p><b>Be empowered. Sign up for access to our exclusive beta.</b></p>
 </form>
@@ -97,7 +109,7 @@ if (!jqueryLoaded) {
     if (script.readyState && script.onload!==null){
         script.onreadystatechange= function () {
               if (this.readyState == 'complete') mce_preload_check();
-        }    
+        }
     }
 }
 
@@ -171,7 +183,7 @@ function mce_init_form(){
                                     		this.value = '';
 									    } else {
 									        if (/\[day\]/.test(fields[0].name)){
-    	                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;									        
+    	                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;
 									        } else {
     	                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
 	                                        }
@@ -197,12 +209,12 @@ function mce_init_form(){
                                     });
                             });
                         return mce_validator.form();
-                    }, 
+                    },
                     success: mce_success_cb
                 };
       $('#mc-embedded-subscribe-form').ajaxForm(options);
-      
-      
+
+
     });
 }
 function mce_success_cb(resp){
@@ -238,11 +250,11 @@ function mce_success_cb(resp){
         try{
             if (index== -1){
                 $('#mce-'+resp.result+'-response').show();
-                $('#mce-'+resp.result+'-response').html(msg);            
+                $('#mce-'+resp.result+'-response').html(msg);
             } else {
                 err_id = 'mce_tmp_error_msg';
                 html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
-                
+
                 var input_id = '#mc_embed_signup';
                 var f = $(input_id);
                 if (ftypes[index]=='address'){
