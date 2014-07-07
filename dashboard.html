@@ -43,11 +43,9 @@
       
       <script>
 (function() {
-  var mailchimpAPI = "http://u8.api.mailchimp.com/1.3/";
-  $.getJSON( flickerAPI, {
-    tags: "mount rainier",
-    tagmode: "any",
-    format: "json"
+  var mailchimpAPI = "http://us8.api.mailchimp.com/2.0/";
+  $.getJSON( mailchimpAPI, {
+    apikey: "4e385fa0e87ae2098c49fde1f9e0fde1-us8",
   })
     .done(function( data ) {
       $.each( data.items, function( i, item ) {
