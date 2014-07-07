@@ -30,18 +30,25 @@
   <body>
   
  Dashboard.
- <div id="myResults"></div>
- <script>
-function httpGet(https://4e385fa0e87ae2098c49fde1f9e0fde1-us8.api.mailchimp.com/2.0/lists/growth-history.json)
-{
-    var xmlHttp = null;
-
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", https://4e385fa0e87ae2098c49fde1f9e0fde1-us8.api.mailchimp.com/2.0/lists/growth-history.json, false);
-    xmlHttp.send(null);
-    return xmlHttp.responseText;
-    document.querySelector('#myResults').innerHTML = 'xmlHttp';
-}
+<div id="images"></div>
+ 
+<script>
+(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+})();
 </script>
  
      <!-- Placed at the end of the document so the pages load faster -->
