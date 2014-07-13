@@ -23,6 +23,29 @@
     	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     	<script src="http://rogerh91.github.io/gridster.js"></script>
     	
+    	 <script type="text/javascript" id="code">
+ -    var gridster;
+ -
+ -    $(function(){
+ -
+ -      gridster = $(".gridster > ul").gridster({
+ -          widget_margins: [5, 5],
+ -          widget_base_dimensions: [500, 500]
+ -      }).data('gridster');
+ -
+ -      var widgets = [
+ -          ['<li>Number of Emails</li>', 1, 2],
+ -          ['<li>Goal for the Week</li>', 5, 5],
+ -          
+ -      ];
+ -
+ -      $.each(widgets, function(i, widget){
+ -          gridster.add_widget.apply(gridster, widget)
+ -      });
+ -
+ -    });
+ -    </script>
+ -
   
 
 	<!-- Optional theme -->
