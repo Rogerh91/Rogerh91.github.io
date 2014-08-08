@@ -48,7 +48,7 @@
 <div class="twelve columns text-center"><img src="http://res.cloudinary.com/shout/image/upload/c_scale,h_300/v1407356770/Utelos-Vector_d150ut.png"></div>
 </div>
 <div class="row top-buffer" ng-app="search">
-<div class="twelve columns text-center"><input type="text" style="height: 37px; margin-top: 1px;" class="input-large search-query" ><button class="btn btn-success btn-large"><i class="icon-white icon-search"></i> Find</button></div>
+<div class="twelve columns text-center" ng-controller="searchCTRL"><input type="text" style="height: 37px; margin-top: 1px;" class="input-large search-query" ><button ng-click="searchClick()" class="btn btn-success btn-large">Find</button></div>
 <br/>
 <div class="twelve columns text-center">
 <p><b>Find the next great smart device that will make your life easier.</b></p>
